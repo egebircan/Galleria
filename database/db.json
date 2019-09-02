@@ -1,0 +1,43 @@
+{
+  "folders": [
+    {
+      "name": "Pinguins",
+      "images": [
+        {
+          "title": "pinguin 1",
+          "url": "https://ixxidesign.azureedge.net/media/2393400/ixxi-lila-and-lola-pinguinprint362_lilaxlola_papersize.jpg?width=498"
+        }
+      ],
+      "id": 1
+    }, 
+
+    {
+      "name": "Lions",
+      "images": [
+        {
+          "title": "Lion 1",
+          "url": "http://cdn.24.co.za/files/Cms/General/d/8439/fe2bd3548bb44867b2534a083d8d6849.jpg"
+        }
+      ],
+      "id": 2
+    }, 
+    
+    {
+      "name": "Fish",
+      "images": [
+        {
+          "title": "Fish 1",
+          "url": "https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+        },
+
+        {
+          "title": "Lion 1",
+          "url": "http://cdn.24.co.za/files/Cms/General/d/8439/fe2bd3548bb44867b2534a083d8d6849.jpg"
+        }
+      ],
+      "id": 3
+    }
+  ],
+  
+  "users": []
+}

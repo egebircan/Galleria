@@ -1,6 +1,8 @@
-export const SIGN_IN = "SIGN_IN";
-export const SIGN_OUT = "SIGN_OUT";
+export const SIGN_UP = "SIGN_UP";
+export const LOG_IN = "LOG_IN";
+export const LOG_OUT = "LOG_OUT";
 export const FETCH_FOLDERS = "FETCH_FOLDERS";
+export const FETCH_FOLDER = "FETCH_FOLDER";
 export const CREATE_FOLDER = "CREATE_FOLDER";
 export const EDIT_FOLDER = "EDIT_FOLDER";
 export const DELETE_FOLDER = "DELETE_FOLDER";

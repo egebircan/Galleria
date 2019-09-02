@@ -16,8 +16,6 @@ class Form extends React.Component {
   
   renderInput = ({ input, label, meta }) => {
     const className = `field ${meta.error && meta.touched ? "error" : ""}`;
-    console.log(meta.touched);
-    console.log(meta.error);
     
     return (
       <div className={className}>
@@ -29,7 +27,7 @@ class Form extends React.Component {
   }
 
   onSubmit = formValues => {
-    this.props.onSubmit(formValues);
+    this.props.onSubmit();
   }
 
   render() {

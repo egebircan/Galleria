@@ -7,7 +7,7 @@ import imageReducer from "./imageReducer";
 
 export default combineReducers({
   login: loginReducer,
-  folder: folderReducer,
-  image: imageReducer,
+  folders: folderReducer,
+  images: imageReducer,
   form: formReducer
 })

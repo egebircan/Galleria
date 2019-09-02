@@ -16,8 +16,8 @@ const App = () => {
   return (
     <div className="ui container">
       <Router history={history}>
-        <Route path="/" exact component={SignUpPage} />
-        <Route path="/login" exact component={LoginPage} />
+        <Route path="/" exact component={LoginPage} />
+        <Route path="/sign-up" exact component={SignUpPage} />
         <Route path="/folders" exact component={FoldersView} />
         <Route path="/folders/new" exact component={CreateFolder} />
         <Route path="/folders/edit/:folderId" exact component={EditFolder} />

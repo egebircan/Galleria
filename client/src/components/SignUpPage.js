@@ -10,7 +10,7 @@ class SignUpPage extends React.Component {
         <div className="ui secondary pointing menu">
           <Link to="/" className="item">Galleria</Link>
           <div className="right menu">
-            <Link to="/login" className="ui primary orange button">Log In</Link>
+            <Link to="/" className="ui primary orange button">Log In</Link>
           </div>
         </div> 
         <h2>Sign Up!</h2>
