@@ -3,21 +3,22 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
 import { fetchImages, fetchFolder } from "../../actions";
+import "../styles/SingleFolder.css";
+import ImageInFolder from "../imageComps/ImageInFolder";
 
 class SingleFolder extends React.Component {
   componentDidMount() {
     console.log(this.props.match.params.folderId);
     this.props.fetchImages(this.props.match.params.folderId);
     this.props.fetchFolder(this.props.match.params.folderId);
+    
   }
-  
+
   renderImages() {
     return (
-      this.props.images.map(image =>
-        <Link to={`/folders/${this.props.id}/${image.title}`} className="img">
-            <img src={`${image.url}`} width="150" height="150" title="White flower" alt="Flower" />
-          </Link> 
-      )
+      this.props.images.map(image => {
+        return <ImageInFolder key={image.title} image={image} folderId={this.props.id} />
+      })
     );
   }
   
@@ -32,7 +33,9 @@ class SingleFolder extends React.Component {
             <Link to="/folders/delete/:folderId" className="ui red button">Delete Folder</Link>
           </div>
         </div> 
-       {this.renderImages()} 
+        <div className="image-list">
+          {this.renderImages()} 
+        </div>
       </div>
     );
   }
