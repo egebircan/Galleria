@@ -48,3 +48,32 @@ export const fetchImages = id => async dispatch => {
   dispatch({ type: FETCH_IMAGES, payload: response.data.images});
 }
 
+export const createFolder = formValues => async dispatch => {
+  console.log(formValues);
+  const name = formValues.input1;
+  const description = formValues.input2;
+  const images = [];
+  const response = await db.post("/folders", {name, description, images});
+  console.log(response);
+
+  dispatch({ type: CREATE_FOLDER, payload: response.data });
+  history.push("/folders");
+}
+
+export const editFolder = (id, formValues) => async dispatch => {
+  const name = formValues.input1;
+  const description = formValues.input2; 
+  const response = await db.patch(`/folders/${id}`, {name, description});
+  console.log(response);
+
+  dispatch({ type: EDIT_FOLDER, payload: response.data});
+  history.push("/folders");
+}
+
+export const deleteFolder = id => async dispatch => {
+  await db.delete(`/folders/${id}`);
+
+  dispatch({ type: DELETE_FOLDER, payload: id});
+  history.push("/folders");
+}
+

@@ -28,7 +28,7 @@ class FoldersView extends React.Component {
               <span className="date">Created in 2019 August</span>
             </div>
             <div className="description">
-              Pictures of {folder.name}
+              {folder.description}
             </div>
           </div>
         </div>      
@@ -40,7 +40,7 @@ class FoldersView extends React.Component {
     return(
       <div>
          <div className="ui secondary pointing menu">
-          <Link to="/" className="item">Galleria</Link>
+          <Link to="/folders" className="item">Galleria</Link>
           <div className="right menu">
             <Link to="/folders/new" className="ui yellow button">New Folder</Link>
           </div>

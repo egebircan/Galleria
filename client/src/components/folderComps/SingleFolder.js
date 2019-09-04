@@ -27,10 +27,10 @@ class SingleFolder extends React.Component {
     return (
       <div>
         <div className="ui secondary pointing menu">
-          <Link to="/" className="item">Galleria</Link>
+          <Link to="/folders" className="item">Galleria</Link>
           <div className="right menu">
-            <Link to="/folders/edit/:folderId" className="ui yellow button">Edit Folder</Link>
-            <Link to="/folders/delete/:folderId" className="ui red button">Delete Folder</Link>
+            <Link to={`/folders/edit/${this.props.id}`} className="ui yellow button">Edit Folder</Link>
+            <Link to={`/folders/delete/${this.props.id}`} className="ui red button">Delete Folder</Link>
           </div>
         </div> 
         <div className="image-list">

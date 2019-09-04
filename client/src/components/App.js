@@ -1,5 +1,5 @@
 import React from "react";
-import { Router, Route } from "react-router-dom";
+import { Router, Route, Switch } from "react-router-dom";
 import history from "../history";
 
 import SignUpPage from "./SignUpPage";
@@ -16,15 +16,17 @@ const App = () => {
   return (
     <div className="ui container">
       <Router history={history}>
-        <Route path="/" exact component={LoginPage} />
-        <Route path="/sign-up" exact component={SignUpPage} />
-        <Route path="/folders" exact component={FoldersView} />
-        <Route path="/folders/new" exact component={CreateFolder} />
-        <Route path="/folders/edit/:folderId" exact component={EditFolder} />
-        <Route path="/folders/delete/:folderId" exact component={DeleteFolder} />
-        <Route path="/folders/:folderId" exact component={SingleFolder} />
-        <Route path="/folders/:folderId/upload" exact component={UploadImage} />
-        <Route path="folders/:folderId/:imgId" exact component={ImageView} />
+        <Switch>
+          <Route path="/" exact component={LoginPage} />
+          <Route path="/sign-up" exact component={SignUpPage} />
+          <Route path="/folders" exact component={FoldersView} />
+          <Route path="/folders/new" exact component={CreateFolder} />
+          <Route path="/folders/edit/:folderId" exact component={EditFolder} />
+          <Route path="/folders/delete/:folderId" exact component={DeleteFolder} />
+          <Route path="/folders/:folderId" exact component={SingleFolder} />
+          <Route path="/folders/:folderId/upload" exact component={UploadImage} />
+          <Route path="folders/:folderId/:imgId" exact component={ImageView} />
+        </Switch>
       </Router>
     </div>
   );

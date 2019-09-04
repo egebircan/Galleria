@@ -27,7 +27,7 @@ class Form extends React.Component {
   }
 
   onSubmit = formValues => {
-    this.props.onSubmit();
+    this.props.onSubmit(formValues);
   }
 
   render() {
